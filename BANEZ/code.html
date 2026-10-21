@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Regie Banez - Student Portfolio Vault</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#0d0e11",
+            "surface-container-low": "#151619",
+            "surface-container": "#1b1c20",
+            "surface-container-high": "#24252a",
+            "surface-container-highest": "#2e3036",
+            "surface": "#101114",
+            "background": "#0d0e11",
+            "primary": "#c3c0ff",
+            "primary-container": "#4f46e5",
+            "on-primary-container": "#dad7ff",
+            "secondary": "#4cd7f6",
+            "secondary-container": "#038fa8",
+            "on-surface": "#e3e2e6",
+            "on-surface-variant": "#9ca3af",
+            "surface-variant": "#2b2d34"
+          },
+          fontFamily: {
+            headline: ["Space Grotesk", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0d0e11;
+      color: #e3e2e6;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-overflow-scrolling: touch;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-pill-active {
+      background: rgba(76, 215, 246, 0.15);
+      border: 1px solid rgba(76, 215, 246, 0.55);
+      box-shadow: 0 0 14px rgba(76, 215, 246, 0.35);
+      color: #4cd7f6 !important;
+    }
+    .neon-border {
+      border: 1px solid rgba(76, 215, 246, 0.28);
+    }
+    .neon-border:hover {
+      border-color: rgba(76, 215, 246, 0.6);
+      box-shadow: 0 0 18px rgba(76, 215, 246, 0.15);
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col items-center justify-start min-h-screen text-on-surface">
+<!-- Mobile Frame Container (Strict 390px responsive width) -->
+<div class="w-full max-w-[390px] min-h-screen flex flex-col relative bg-surface border-x border-surface-variant/20 shadow-2xl">
+<!-- Top Fixed Header -->
+<header class="fixed top-0 w-full max-w-[390px] z-40 bg-surface/90 backdrop-blur-xl border-b border-surface-variant/40 h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-primary-container/20 border border-primary/40 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-[16px] tracking-tight text-on-surface leading-tight">Portfolio Vault</span>
+<span class="font-mono text-[9.5px] text-secondary tracking-wider uppercase font-semibold">Regie Banez • IT Vault</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-full overflow-hidden border border-secondary/50 ring-2 ring-secondary/25 hover:ring-secondary/50 active:scale-95 transition-all cursor-pointer" onclick="switchView('about')">
+<img alt="Regie Banez" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh66FLD5n1s0XdVhUnfOQJZ3VwJheKgCDIzc20N6LFxgX7jBe0zFJE0OuIvdqj9z6kIZTo32X91O1MZhyWS1Dyl_QYKJrteK1VbwvyiOafVs08qrPUcAuEhydIpbTFndrnb_iEYb--yWwH45vVFxszKoTPG3PM5LGSnkI3IvTcbI4gf9M1L59-vK7WiajlYoy0IXluXQto8VOyKEzOxlVegiqsi3U5kw4CEpiwkmqdVU0ZKDlK2cS6KYZBnBz9wUWFoQ"/>
+</button>
+</div>
+</header>
+<!-- Scrollable Main Content -->
+<main class="w-full pt-20 pb-24 px-4 flex flex-col gap-4 flex-1 overflow-y-auto">
+<!-- VIEW 1: HOME -->
+<section class="flex flex-col gap-4 w-full" id="viewHome">
+<!-- Profile Card -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/50 shadow-lg flex flex-col gap-3">
+<div class="flex items-start gap-3.5">
+<div class="w-16 h-16 rounded-2xl overflow-hidden shrink-0 border border-secondary/50 ring-2 ring-secondary/20 shadow-md">
+<img alt="Regie Banez" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh66FLD5n1s0XdVhUnfOQJZ3VwJheKgCDIzc20N6LFxgX7jBe0zFJE0OuIvdqj9z6kIZTo32X91O1MZhyWS1Dyl_QYKJrteK1VbwvyiOafVs08qrPUcAuEhydIpbTFndrnb_iEYb--yWwH45vVFxszKoTPG3PM5LGSnkI3IvTcbI4gf9M1L59-vK7WiajlYoy0IXluXQto8VOyKEzOxlVegiqsi3U5kw4CEpiwkmqdVU0ZKDlK2cS6KYZBnBz9wUWFoQ"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 justify-center">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h1 class="font-headline text-[18px] font-bold text-on-surface leading-snug">Regie Banez</h1>
+<span class="material-symbols-outlined text-[17px] text-secondary">verified</span>
+</div>
+<span class="font-mono text-[11.5px] text-secondary font-medium leading-tight mt-0.5">4th Year BS Information Technology</span>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-primary-container/20 text-primary border border-primary/30 font-semibold">4th Year IT • 2026–2027</span>
+</div>
+</div>
+</div>
+<p class="text-[12px] text-on-surface-variant leading-relaxed pt-2.5 border-t border-surface-variant/30">
+            I love games and also coding. Driven by an eagerness to build immersive applications, explore game mechanics, and master modern software engineering.
+          </p>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-surface-variant/40 my-0.5"></div>
+<!-- THE PROJECTS MADE Section Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[19px] text-secondary">folder_special</span>
+<h2 class="font-headline text-[15px] font-bold text-on-surface tracking-tight uppercase">THE PROJECTS MADE</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-mono bg-secondary/15 text-secondary border border-secondary/30 font-semibold">4 Artifacts</span>
+</div>
+<!-- 4 Core Hardcoded Project Cards -->
+<div class="flex flex-col gap-3.5">
+<!-- Project 1: The Gas Station -->
+<div class="rounded-2xl bg-surface-container p-3.5 border border-surface-variant/50 neon-border flex flex-col gap-3 shadow-md transition-all">
+<div class="flex items-start justify-between gap-2.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container-lowest shrink-0 border border-secondary/40">
+<img alt="The Gas Station" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB611pKbgn8xTkAWlRLteNE7OItt3IsmyAFx6_-KqJdAFsD0ayyjOwta-9ZlyGI4EZcvmyJbz6e27wbaCQpx43LICo6kYwNlFQ-G3bDZEUQEFqfyx-uHUGbdKr0FF-5EYy8AO2GCFEEdiWsUKTx9w-USM9zNSwuyJt96QDS_OjWBDWM0s5nhaAJCLQYRYIDXwh6KvKQTd492_79hjiE5x-GZ8eBiWSgg5h2BWlRyL3zSObfbMSykk3paiUU4_HJbXVgaw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[9.5px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">sports_esports</span> Roblox Game Project
+                  </span>
+<h3 class="font-headline text-[14px] font-bold text-on-surface truncate">The Gas Station</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9px] font-mono bg-primary-container/20 text-primary border border-primary/30 shrink-0 font-medium">Night Shift</span>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">Horror night shift experience. Survive Agatha's secret until 5:00 AM on PC Roblox.</p>
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuB611pKbgn8xTkAWlRLteNE7OItt3IsmyAFx6_-KqJdAFsD0ayyjOwta-9ZlyGI4EZcvmyJbz6e27wbaCQpx43LICo6kYwNlFQ-G3bDZEUQEFqfyx-uHUGbdKr0FF-5EYy8AO2GCFEEdiWsUKTx9w-USM9zNSwuyJt96QDS_OjWBDWM0s5nhaAJCLQYRYIDXwh6KvKQTd492_79hjiE5x-GZ8eBiWSgg5h2BWlRyL3zSObfbMSykk3paiUU4_HJbXVgaw', 'The Gas Station', 'Roblox Game Project')">
+<img alt="The Gas Station preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB611pKbgn8xTkAWlRLteNE7OItt3IsmyAFx6_-KqJdAFsD0ayyjOwta-9ZlyGI4EZcvmyJbz6e27wbaCQpx43LICo6kYwNlFQ-G3bDZEUQEFqfyx-uHUGbdKr0FF-5EYy8AO2GCFEEdiWsUKTx9w-USM9zNSwuyJt96QDS_OjWBDWM0s5nhaAJCLQYRYIDXwh6KvKQTd492_79hjiE5x-GZ8eBiWSgg5h2BWlRyL3zSObfbMSykk3paiUU4_HJbXVgaw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[10.5px] font-mono font-medium shadow">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[9.5px] font-mono text-on-surface-variant">Verified by Regie</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Sudoku Puzzle Game -->
+<div class="rounded-2xl bg-surface-container p-3.5 border border-surface-variant/50 neon-border flex flex-col gap-3 shadow-md transition-all">
+<div class="flex items-start justify-between gap-2.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container-lowest shrink-0 border border-secondary/40">
+<img alt="Sudoku Puzzle Game" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbMRAlHk0F5u7HOzYtzV5F4srz7Ezxup7T7b5AfwH6d3u7tF6lTkkTvtzcnIj6SWir-NIWfH9Qk1QjeIYuDmNUzGFFFxyKRVZKC5jkTidwwapXpIBhMnUVhBAZxtbdMHlzw65wanPdT6hOer6T5Drlm87w9TotJd55WoJSsSh9JL3PkPx5hOdG8sJ5Jomfg3jaQcYNvpfhpP5TUtBSylGVPsCHBi2lYK8vgw0Mbq4-OMbpEjV6MgHOyUXu7fXLSL4brg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[9.5px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">code</span> Web &amp; Algorithm
+                  </span>
+<h3 class="font-headline text-[14px] font-bold text-on-surface truncate">Sudoku Puzzle Game</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9px] font-mono bg-primary-container/20 text-primary border border-primary/30 shrink-0 font-medium">Backtracking</span>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">Interactive 9x9 board with live backtracking algorithm and dynamic keypad inputs.</p>
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBbMRAlHk0F5u7HOzYtzV5F4srz7Ezxup7T7b5AfwH6d3u7tF6lTkkTvtzcnIj6SWir-NIWfH9Qk1QjeIYuDmNUzGFFFxyKRVZKC5jkTidwwapXpIBhMnUVhBAZxtbdMHlzw65wanPdT6hOer6T5Drlm87w9TotJd55WoJSsSh9JL3PkPx5hOdG8sJ5Jomfg3jaQcYNvpfhpP5TUtBSylGVPsCHBi2lYK8vgw0Mbq4-OMbpEjV6MgHOyUXu7fXLSL4brg', 'Sudoku Puzzle Game', 'Web &amp; Algorithm')">
+<img alt="Sudoku Puzzle Game preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbMRAlHk0F5u7HOzYtzV5F4srz7Ezxup7T7b5AfwH6d3u7tF6lTkkTvtzcnIj6SWir-NIWfH9Qk1QjeIYuDmNUzGFFFxyKRVZKC5jkTidwwapXpIBhMnUVhBAZxtbdMHlzw65wanPdT6hOer6T5Drlm87w9TotJd55WoJSsSh9JL3PkPx5hOdG8sJ5Jomfg3jaQcYNvpfhpP5TUtBSylGVPsCHBi2lYK8vgw0Mbq4-OMbpEjV6MgHOyUXu7fXLSL4brg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[10.5px] font-mono font-medium shadow">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[9.5px] font-mono text-on-surface-variant">Verified by Regie</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Save Our Oceans - Ecopoints -->
+<div class="rounded-2xl bg-surface-container p-3.5 border border-surface-variant/50 neon-border flex flex-col gap-3 shadow-md transition-all">
+<div class="flex items-start justify-between gap-2.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container-lowest shrink-0 border border-secondary/40">
+<img alt="Save Our Oceans - Ecopoints" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEDCegNulIQHzk-M6nOfFCZ2okZYQBjNWRBtp0P4JhRFGBU-vzxYVk1JEUo9nfYj2QwZn91ftsbJ6D8EyW3VXiTuCBF15vvylPEY1sl7iZul4zLTYpi8kCt6aYAJofGuJKMViHR5mCZAkqYvFxbWVJF4DqzOvKZ_HkKqxTnydfuRELM-ov04ygF-_pVQY_2xdBA-zXINV_L76cIdvMUuprGzaiSNauXqAuRstfeZpNlKs5lt38_VTztXc2ktdocD1FPw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[9.5px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">eco</span> IoT &amp; Bottle System
+                  </span>
+<h3 class="font-headline text-[14px] font-bold text-on-surface truncate">Save Our Oceans - Ecopoints</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9px] font-mono bg-primary-container/20 text-primary border border-primary/30 shrink-0 font-medium">IoT Portal</span>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">IoT-based plastic bottle collection and reward system authentication portal.</p>
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBEDCegNulIQHzk-M6nOfFCZ2okZYQBjNWRBtp0P4JhRFGBU-vzxYVk1JEUo9nfYj2QwZn91ftsbJ6D8EyW3VXiTuCBF15vvylPEY1sl7iZul4zLTYpi8kCt6aYAJofGuJKMViHR5mCZAkqYvFxbWVJF4DqzOvKZ_HkKqxTnydfuRELM-ov04ygF-_pVQY_2xdBA-zXINV_L76cIdvMUuprGzaiSNauXqAuRstfeZpNlKs5lt38_VTztXc2ktdocD1FPw', 'Save Our Oceans - Ecopoints', 'IoT &amp; Plastic Bottle System')">
+<img alt="Save Our Oceans preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEDCegNulIQHzk-M6nOfFCZ2okZYQBjNWRBtp0P4JhRFGBU-vzxYVk1JEUo9nfYj2QwZn91ftsbJ6D8EyW3VXiTuCBF15vvylPEY1sl7iZul4zLTYpi8kCt6aYAJofGuJKMViHR5mCZAkqYvFxbWVJF4DqzOvKZ_HkKqxTnydfuRELM-ov04ygF-_pVQY_2xdBA-zXINV_L76cIdvMUuprGzaiSNauXqAuRstfeZpNlKs5lt38_VTztXc2ktdocD1FPw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[10.5px] font-mono font-medium shadow">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[9.5px] font-mono text-on-surface-variant">Verified by Regie</span>
+</div>
+</div>
+</div>
+<!-- Project 4: C# Console Grading System -->
+<div class="rounded-2xl bg-surface-container p-3.5 border border-surface-variant/50 neon-border flex flex-col gap-3 shadow-md transition-all">
+<div class="flex items-start justify-between gap-2.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container-lowest shrink-0 border border-secondary/40">
+<img alt="C# Console Grading System" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoItJSkPMoF-mYSfZqT-X62oLXSzlIDNeIxpZL4GK2Jw_pREr3q-YllFG6HUa58kjg9B826Z0BuFpSuuEuiFRgwn-KkIdHMTEkuECZsquvLJahgUtw_8Omt2AF8_Wjbr0KiBu6fWXqIxpXgbm8awGUEre--1pac-MOrDtxDqmXTkw51BTktYuHFy6QKHeduSfI-J1LVdaUV7nNDFhRMkgBEg9HlFTIaA2v5peSI-01XXJCfAtNGVj05ZOPeCq25_Ol0w"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[9.5px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">terminal</span> C# / VS Console
+                  </span>
+<h3 class="font-headline text-[14px] font-bold text-on-surface truncate">C# Console Grading System</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9px] font-mono bg-primary-container/20 text-primary border border-primary/30 shrink-0 font-medium">.NET 8.0</span>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">Visual Studio Debug Console .NET 8.0 Gomez.exe academic grading calculation logic.</p>
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuAoItJSkPMoF-mYSfZqT-X62oLXSzlIDNeIxpZL4GK2Jw_pREr3q-YllFG6HUa58kjg9B826Z0BuFpSuuEuiFRgwn-KkIdHMTEkuECZsquvLJahgUtw_8Omt2AF8_Wjbr0KiBu6fWXqIxpXgbm8awGUEre--1pac-MOrDtxDqmXTkw51BTktYuHFy6QKHeduSfI-J1LVdaUV7nNDFhRMkgBEg9HlFTIaA2v5peSI-01XXJCfAtNGVj05ZOPeCq25_Ol0w', 'C# Console Grading System', 'C# / Visual Studio Console')">
+<img alt="C# Console Grading System preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoItJSkPMoF-mYSfZqT-X62oLXSzlIDNeIxpZL4GK2Jw_pREr3q-YllFG6HUa58kjg9B826Z0BuFpSuuEuiFRgwn-KkIdHMTEkuECZsquvLJahgUtw_8Omt2AF8_Wjbr0KiBu6fWXqIxpXgbm8awGUEre--1pac-MOrDtxDqmXTkw51BTktYuHFy6QKHeduSfI-J1LVdaUV7nNDFhRMkgBEg9HlFTIaA2v5peSI-01XXJCfAtNGVj05ZOPeCq25_Ol0w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-2.5">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[10.5px] font-mono font-medium shadow">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[9.5px] font-mono text-on-surface-variant">Verified by Regie</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-surface-variant/40 my-1"></div>
+<!-- About Me & Skills Embedded on Home -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[19px] text-secondary">badge</span>
+<h2 class="font-headline text-[15px] font-bold text-on-surface tracking-tight uppercase">About Me &amp; Skills</h2>
+</div>
+<span class="text-[10px] font-mono text-secondary font-semibold">Overview</span>
+</div>
+<!-- Academic Background & Focus Card -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">school</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Academic Background &amp; Focus</h3>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">
+            Currently navigating 4th Year BS Information Technology, balancing rigorous coursework with hands-on labs, Roblox game projects, and C# software systems. Passionate about turning complex logic into playable and functional products.
+          </p>
+</div>
+<!-- Technical Skills & Competencies -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Technical Skills &amp; Competencies</h3>
+</div>
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold">4 Categories</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-secondary uppercase font-medium">Game Development &amp; Scripting</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Roblox Studio</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Lua Scripting</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Game Physics &amp; Mechanics</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-primary uppercase font-medium">Programming Languages &amp; Backend</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">C#</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">.NET Core 8.0</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Console Algorithms</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-secondary uppercase font-medium">Web Development &amp; Design</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">HTML5 &amp; CSS3</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">JavaScript (ES6+)</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Tailwind CSS &amp; UI/UX</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-primary uppercase font-medium">Tools &amp; Environments</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">Visual Studio 2022</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">Git &amp; GitHub</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Debugging &amp; Diagnostics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interests & Passions (4 Clean Cards) -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">interests</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Interests &amp; Passions</h3>
+</div>
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold">Focus Areas</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- 1 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">sports_esports</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Game Development &amp; Mechanics</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-secondary/15 text-secondary border border-secondary/30">Roblox &amp; Lua</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Passion for crafting immersive gameplay, Roblox scripting (Lua), world-building, and atmospheric level design.</p>
+</div>
+<!-- 2 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Software Architecture &amp; Systems</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-primary-container/20 text-primary border border-primary/30">C# &amp; .NET</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Eagerness to build structured C# / .NET applications, algorithmic problem solving, and robust backend logic.</p>
+</div>
+<!-- 3 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">palette</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">UI/UX &amp; Interactive Design</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-secondary/15 text-secondary border border-secondary/30">Obsidian Dark</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Deep interest in futuristic/cyberpunk dark interfaces, clean typography, responsive layouts, and intuitive micro-interactions.</p>
+</div>
+<!-- 4 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">stadia_controller</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Interactive Gaming &amp; Virtual Worlds</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-primary-container/20 text-primary border border-primary/30">Sandbox &amp; Indie</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Exploring emergent game mechanics, indie titles, interactive storytelling, and creative sandbox virtual environments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- VIEW 2: PROJECTS -->
+<section class="flex flex-col gap-4 w-full hidden" id="viewProjects">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">folder_special</span>
+<h2 class="font-headline text-[17px] text-on-surface font-bold tracking-tight">THE PROJECTS MADE</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-secondary/15 text-secondary border border-secondary/30 font-semibold">4 Verified</span>
+</div>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">
+          Permanent core showcase of completed projects, game systems, and algorithm demonstrations by Regie Banez. Tap any artifact for detailed preview &amp; zoom.
+        </p>
+<!-- Projects List -->
+<div class="flex flex-col gap-4">
+<!-- Item 1 -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 neon-border flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Roblox Game Project
+              </span>
+<span class="text-[10px] font-mono text-primary font-semibold">01 / 04</span>
+</div>
+<h3 class="font-headline text-[16px] font-bold text-on-surface">The Gas Station</h3>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">Horror night shift experience. Survive Agatha's secret until 5:00 AM on PC Roblox.</p>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuB611pKbgn8xTkAWlRLteNE7OItt3IsmyAFx6_-KqJdAFsD0ayyjOwta-9ZlyGI4EZcvmyJbz6e27wbaCQpx43LICo6kYwNlFQ-G3bDZEUQEFqfyx-uHUGbdKr0FF-5EYy8AO2GCFEEdiWsUKTx9w-USM9zNSwuyJt96QDS_OjWBDWM0s5nhaAJCLQYRYIDXwh6KvKQTd492_79hjiE5x-GZ8eBiWSgg5h2BWlRyL3zSObfbMSykk3paiUU4_HJbXVgaw', 'The Gas Station', 'Roblox Game Project')">
+<img alt="The Gas Station" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB611pKbgn8xTkAWlRLteNE7OItt3IsmyAFx6_-KqJdAFsD0ayyjOwta-9ZlyGI4EZcvmyJbz6e27wbaCQpx43LICo6kYwNlFQ-G3bDZEUQEFqfyx-uHUGbdKr0FF-5EYy8AO2GCFEEdiWsUKTx9w-USM9zNSwuyJt96QDS_OjWBDWM0s5nhaAJCLQYRYIDXwh6KvKQTd492_79hjiE5x-GZ8eBiWSgg5h2BWlRyL3zSObfbMSykk3paiUU4_HJbXVgaw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[11px] font-mono font-medium">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[10px] font-mono text-on-surface-variant">PC Roblox</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 neon-border flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Web &amp; Algorithm
+              </span>
+<span class="text-[10px] font-mono text-primary font-semibold">02 / 04</span>
+</div>
+<h3 class="font-headline text-[16px] font-bold text-on-surface">Sudoku Puzzle Game</h3>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">Interactive 9x9 board with live backtracking algorithm and input keypad.</p>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBbMRAlHk0F5u7HOzYtzV5F4srz7Ezxup7T7b5AfwH6d3u7tF6lTkkTvtzcnIj6SWir-NIWfH9Qk1QjeIYuDmNUzGFFFxyKRVZKC5jkTidwwapXpIBhMnUVhBAZxtbdMHlzw65wanPdT6hOer6T5Drlm87w9TotJd55WoJSsSh9JL3PkPx5hOdG8sJ5Jomfg3jaQcYNvpfhpP5TUtBSylGVPsCHBi2lYK8vgw0Mbq4-OMbpEjV6MgHOyUXu7fXLSL4brg', 'Sudoku Puzzle Game', 'Web &amp; Algorithm')">
+<img alt="Sudoku Puzzle Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbMRAlHk0F5u7HOzYtzV5F4srz7Ezxup7T7b5AfwH6d3u7tF6lTkkTvtzcnIj6SWir-NIWfH9Qk1QjeIYuDmNUzGFFFxyKRVZKC5jkTidwwapXpIBhMnUVhBAZxtbdMHlzw65wanPdT6hOer6T5Drlm87w9TotJd55WoJSsSh9JL3PkPx5hOdG8sJ5Jomfg3jaQcYNvpfhpP5TUtBSylGVPsCHBi2lYK8vgw0Mbq4-OMbpEjV6MgHOyUXu7fXLSL4brg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[11px] font-mono font-medium">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[10px] font-mono text-on-surface-variant">Live Solver</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 neon-border flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> IoT &amp; Plastic Bottle System
+              </span>
+<span class="text-[10px] font-mono text-primary font-semibold">03 / 04</span>
+</div>
+<h3 class="font-headline text-[16px] font-bold text-on-surface">Save Our Oceans - Ecopoints</h3>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">IoT-based plastic bottle collection and reward system authentication portal.</p>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBEDCegNulIQHzk-M6nOfFCZ2okZYQBjNWRBtp0P4JhRFGBU-vzxYVk1JEUo9nfYj2QwZn91ftsbJ6D8EyW3VXiTuCBF15vvylPEY1sl7iZul4zLTYpi8kCt6aYAJofGuJKMViHR5mCZAkqYvFxbWVJF4DqzOvKZ_HkKqxTnydfuRELM-ov04ygF-_pVQY_2xdBA-zXINV_L76cIdvMUuprGzaiSNauXqAuRstfeZpNlKs5lt38_VTztXc2ktdocD1FPw', 'Save Our Oceans - Ecopoints', 'IoT &amp; Plastic Bottle System')">
+<img alt="Save Our Oceans" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEDCegNulIQHzk-M6nOfFCZ2okZYQBjNWRBtp0P4JhRFGBU-vzxYVk1JEUo9nfYj2QwZn91ftsbJ6D8EyW3VXiTuCBF15vvylPEY1sl7iZul4zLTYpi8kCt6aYAJofGuJKMViHR5mCZAkqYvFxbWVJF4DqzOvKZ_HkKqxTnydfuRELM-ov04ygF-_pVQY_2xdBA-zXINV_L76cIdvMUuprGzaiSNauXqAuRstfeZpNlKs5lt38_VTztXc2ktdocD1FPw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[11px] font-mono font-medium">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[10px] font-mono text-on-surface-variant">IoT Auth</span>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 neon-border flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> C# / Visual Studio Console
+              </span>
+<span class="text-[10px] font-mono text-primary font-semibold">04 / 04</span>
+</div>
+<h3 class="font-headline text-[16px] font-bold text-on-surface">C# Console Grading System</h3>
+<p class="text-[12px] text-on-surface-variant leading-relaxed">Microsoft Visual Studio Debug Console .NET 8.0 Gomez.exe academic grading calculator.</p>
+<div class="relative w-full h-48 rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-variant/40 cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuAoItJSkPMoF-mYSfZqT-X62oLXSzlIDNeIxpZL4GK2Jw_pREr3q-YllFG6HUa58kjg9B826Z0BuFpSuuEuiFRgwn-KkIdHMTEkuECZsquvLJahgUtw_8Omt2AF8_Wjbr0KiBu6fWXqIxpXgbm8awGUEre--1pac-MOrDtxDqmXTkw51BTktYuHFy6QKHeduSfI-J1LVdaUV7nNDFhRMkgBEg9HlFTIaA2v5peSI-01XXJCfAtNGVj05ZOPeCq25_Ol0w', 'C# Console Grading System', 'C# / Visual Studio Console')">
+<img alt="C# Console Grading System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoItJSkPMoF-mYSfZqT-X62oLXSzlIDNeIxpZL4GK2Jw_pREr3q-YllFG6HUa58kjg9B826Z0BuFpSuuEuiFRgwn-KkIdHMTEkuECZsquvLJahgUtw_8Omt2AF8_Wjbr0KiBu6fWXqIxpXgbm8awGUEre--1pac-MOrDtxDqmXTkw51BTktYuHFy6QKHeduSfI-J1LVdaUV7nNDFhRMkgBEg9HlFTIaA2v5peSI-01XXJCfAtNGVj05ZOPeCq25_Ol0w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end justify-between p-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high/90 text-secondary text-[11px] font-mono font-medium">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Tap to Zoom
+                </span>
+<span class="text-[10px] font-mono text-on-surface-variant">.NET Core 8.0</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VIEW 3: ABOUT -->
+<section class="flex flex-col gap-4 w-full hidden" id="viewAbout">
+<div class="flex items-center justify-between">
+<h2 class="font-headline text-[17px] text-on-surface font-bold tracking-tight">About Me &amp; Skills</h2>
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-primary-container/20 text-primary border border-primary/30 font-semibold">4th Year IT</span>
+</div>
+<!-- Profile Detail Card -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/50 shadow-lg flex flex-col gap-3.5">
+<div class="flex items-start gap-3.5">
+<div class="w-16 h-16 rounded-2xl overflow-hidden shrink-0 border border-secondary/50 ring-2 ring-primary/20 shadow-md">
+<img alt="Regie Banez" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh66FLD5n1s0XdVhUnfOQJZ3VwJheKgCDIzc20N6LFxgX7jBe0zFJE0OuIvdqj9z6kIZTo32X91O1MZhyWS1Dyl_QYKJrteK1VbwvyiOafVs08qrPUcAuEhydIpbTFndrnb_iEYb--yWwH45vVFxszKoTPG3PM5LGSnkI3IvTcbI4gf9M1L59-vK7WiajlYoy0IXluXQto8VOyKEzOxlVegiqsi3U5kw4CEpiwkmqdVU0ZKDlK2cS6KYZBnBz9wUWFoQ"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 justify-center">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline text-[18px] font-bold text-on-surface leading-tight">Regie Banez</h3>
+<span class="material-symbols-outlined text-[17px] text-secondary">verified</span>
+</div>
+<span class="font-mono text-[11.5px] text-secondary font-medium leading-tight mt-0.5">4th Year BS Information Technology</span>
+<span class="font-mono text-[10px] text-on-surface-variant mt-1.5">Academic Year: 2026–2027</span>
+</div>
+</div>
+<p class="text-[12px] text-on-surface-variant leading-relaxed pt-2 border-t border-surface-variant/30">
+            I love games and also coding. Driven by an eagerness to build immersive applications, explore game mechanics, and master modern software engineering.
+          </p>
+</div>
+<!-- Academic Background & Focus Card -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">school</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Academic Background &amp; Focus</h3>
+</div>
+<p class="text-[11.5px] text-on-surface-variant leading-relaxed">
+            Currently navigating 4th Year BS Information Technology, balancing rigorous coursework with hands-on labs, Roblox game projects, and C# software systems. Passionate about turning complex logic into playable and functional products.
+          </p>
+</div>
+<!-- Technical Skills & Competencies -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Technical Skills &amp; Competencies</h3>
+</div>
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold">4 Categories</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-secondary uppercase font-medium">Game Development &amp; Scripting</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Roblox Studio</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Lua Scripting</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Game Physics &amp; Mechanics</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-primary uppercase font-medium">Programming Languages &amp; Backend</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">C#</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">.NET Core 8.0</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Console Algorithms</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-secondary uppercase font-medium">Web Development &amp; Design</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">HTML5 &amp; CSS3</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">JavaScript (ES6+)</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-secondary/30 text-[11px] font-mono text-secondary">Tailwind CSS &amp; UI/UX</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[10.5px] font-mono text-primary uppercase font-medium">Tools &amp; Environments</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">Visual Studio 2022</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-primary/30 text-[11px] font-mono text-primary">Git &amp; GitHub</span>
+<span class="px-2.5 py-1 rounded-xl bg-surface-container-lowest border border-surface-variant/40 text-[11px] font-mono text-on-surface">Debugging &amp; Diagnostics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interests & Passions (4 Clean Cards) -->
+<div class="rounded-2xl bg-surface-container p-4 border border-surface-variant/40 shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">interests</span>
+<h3 class="font-headline text-[13.5px] font-bold text-on-surface">Interests &amp; Passions</h3>
+</div>
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold">Focus Areas</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- 1 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">sports_esports</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Game Development &amp; Mechanics</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-secondary/15 text-secondary border border-secondary/30">Roblox &amp; Lua</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Passion for crafting immersive gameplay, Roblox scripting (Lua), world-building, and atmospheric level design.</p>
+</div>
+<!-- 2 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Software Architecture &amp; Systems</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-primary-container/20 text-primary border border-primary/30">C# &amp; .NET</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Eagerness to build structured C# / .NET applications, algorithmic problem solving, and robust backend logic.</p>
+</div>
+<!-- 3 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">palette</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">UI/UX &amp; Interactive Design</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-secondary/15 text-secondary border border-secondary/30">Obsidian Dark</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Deep interest in futuristic/cyberpunk dark interfaces, clean typography, responsive layouts, and intuitive micro-interactions.</p>
+</div>
+<!-- 4 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest border border-surface-variant/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">stadia_controller</span>
+<h4 class="font-headline text-[12.5px] font-bold text-on-surface">Interactive Gaming &amp; Virtual Worlds</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[9.5px] font-mono bg-primary-container/20 text-primary border border-primary/30">Sandbox &amp; Indie</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Exploring emergent game mechanics, indie titles, interactive storytelling, and creative sandbox virtual environments.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FIXED BOTTOM NAVIGATION BAR: 3 TABS ONLY (Home, Projects, About) -->
+<nav class="fixed bottom-0 w-full max-w-[390px] z-40 bg-surface/90 backdrop-blur-xl border-t border-surface-variant/40 h-16 px-6 flex items-center justify-between">
+<!-- Home Tab -->
+<button class="flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 nav-pill-active transition-all cursor-pointer" id="navHome" onclick="switchView('home')">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="font-mono text-[11px] font-semibold">Home</span>
+</button>
+<!-- Projects Tab -->
+<button class="flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" id="navProjects" onclick="switchView('projects')">
+<span class="material-symbols-outlined text-[20px]">folder_special</span>
+<span class="font-mono text-[11px] font-semibold">Projects</span>
+</button>
+<!-- About Tab -->
+<button class="flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" id="navAbout" onclick="switchView('about')">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="font-mono text-[11px] font-semibold">About</span>
+</button>
+</nav>
+<!-- FULLSCREEN IMAGE LIGHTBOX MODAL -->
+<div class="fixed inset-0 z-50 bg-background/95 backdrop-blur-2xl flex flex-col justify-between p-4 hidden" id="lightboxModal">
+<!-- Top controls -->
+<div class="flex items-center justify-between w-full pb-2.5 border-b border-surface-variant/40">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-headline text-[15px] text-on-surface font-bold truncate" id="lightboxTitle">Artifact Preview</span>
+<span class="text-[10.5px] font-mono text-secondary truncate" id="lightboxSubtitle">Tap or zoom to inspect proof</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="w-8 h-8 rounded-xl bg-surface-container border border-surface-variant/40 flex items-center justify-center text-on-surface hover:text-secondary active:scale-95" onclick="adjustZoom(-0.25)" title="Zoom Out">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<button class="h-8 px-2 rounded-xl bg-surface-container border border-surface-variant/40 font-mono text-[11px] text-secondary flex items-center justify-center" onclick="resetZoom()">
+<span id="zoomDisplay">100%</span>
+</button>
+<button class="w-8 h-8 rounded-xl bg-surface-container border border-surface-variant/40 flex items-center justify-center text-on-surface hover:text-secondary active:scale-95" onclick="adjustZoom(0.25)" title="Zoom In">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded-xl bg-surface-container border border-surface-variant/40 flex items-center justify-center text-on-surface hover:text-red-400 active:scale-95 ml-1" onclick="closeLightbox()" title="Close">
+<span class="material-symbols-outlined text-[19px]">close</span>
+</button>
+</div>
+</div>
+<!-- Image Canvas -->
+<div class="flex-1 flex items-center justify-center overflow-hidden my-3 w-full bg-surface-container-lowest/80 rounded-2xl border border-surface-variant/40 relative">
+<div class="transition-transform duration-200 ease-out origin-center flex items-center justify-center max-w-full" id="lightboxCanvas" style="transform: scale(1);">
+<img alt="Project Zoom Preview" class="max-w-[90vw] max-h-[64vh] object-contain rounded-xl shadow-2xl border border-secondary/30 ring-1 ring-secondary/20" id="lightboxImg" src=""/>
+</div>
+</div>
+<!-- Bottom controls -->
+<div class="w-full flex items-center justify-between pt-2.5 border-t border-surface-variant/40">
+<span class="text-[11px] font-mono text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified</span> Verified Artifact • Regie Banez
+        </span>
+<button class="px-3.5 py-1.5 rounded-xl bg-secondary/15 text-secondary border border-secondary/30 text-[11.5px] font-mono font-medium active:scale-95 transition-all" onclick="closeLightbox()">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Engine -->
+<script>
+    let currentZoom = 1.0;
+
+    function switchView(viewName) {
+      // Hide all views
+      document.getElementById('viewHome').classList.add('hidden');
+      document.getElementById('viewProjects').classList.add('hidden');
+      document.getElementById('viewAbout').classList.add('hidden');
+
+      // Reset all navigation states
+      const tabs = ['navHome', 'navProjects', 'navAbout'];
+      tabs.forEach(tabId => {
+        const el = document.getElementById(tabId);
+        if (el) {
+          el.className = 'flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 text-on-surface-variant hover:text-on-surface transition-all cursor-pointer';
+        }
+      });
+
+      // Activate chosen tab
+      if (viewName === 'home') {
+        document.getElementById('viewHome').classList.remove('hidden');
+        document.getElementById('navHome').className = 'flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 nav-pill-active transition-all cursor-pointer';
+      } else if (viewName === 'projects') {
+        document.getElementById('viewProjects').classList.remove('hidden');
+        document.getElementById('navProjects').className = 'flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 nav-pill-active transition-all cursor-pointer';
+      } else if (viewName === 'about') {
+        document.getElementById('viewAbout').classList.remove('hidden');
+        document.getElementById('navAbout').className = 'flex-1 flex flex-col items-center justify-center py-1.5 rounded-xl gap-0.5 nav-pill-active transition-all cursor-pointer';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openLightbox(imgSrc, title, tag) {
+      const img = document.getElementById('lightboxImg');
+      const titleEl = document.getElementById('lightboxTitle');
+      const subEl = document.getElementById('lightboxSubtitle');
+
+      img.src = imgSrc;
+      titleEl.textContent = title || 'Project Artifact';
+      subEl.textContent = `${tag || 'Verified Work'} · Regie Banez`;
+
+      resetZoom();
+      document.getElementById('lightboxModal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+
+    function adjustZoom(delta) {
+      currentZoom = Math.min(3.0, Math.max(0.6, currentZoom + delta));
+      document.getElementById('lightboxCanvas').style.transform = `scale(${currentZoom})`;
+      document.getElementById('zoomDisplay').textContent = `${Math.round(currentZoom * 100)}%`;
+    }
+
+    function resetZoom() {
+      currentZoom = 1.0;
+      document.getElementById('lightboxCanvas').style.transform = 'scale(1)';
+      document.getElementById('zoomDisplay').textContent = '100%';
+    }
+  </script>
+</body></html>
